@@ -1,0 +1,195 @@
+var currentPlayer = true;
+var d00 = false;
+var d01 = false;
+var d02 = false;
+
+var d10 = false;
+var d11 = false;
+var d12 = false;
+
+var d20 = false;
+var d21 = false;
+var d22 = false;
+
+function setup() {
+  createCanvas(594, 594);
+  
+}
+
+function draw() {
+  background(220);
+
+  i00 = rect(0,0, 193.3, 193.3);  
+  i01 = rect(200, 0, 193.3, 193.3);
+  i02 = rect(400, 0, 193.3, 193.3);
+  
+  i10 = rect(0, 200, 193.3, 193.3);
+  i11 = rect(200, 200, 193.3, 193.3);
+  i12 = rect(400, 200, 193.3, 193.3);
+  
+  i20 = rect(0, 400, 193.3, 193.3);
+  i21 = rect(200, 400, 193.3, 193.3);
+  i22 = rect(400, 400, 193.3, 193.3);
+  
+  if(d00 == true)
+  {
+    if(currentPlayer == true){
+      line(0,0,193,193);
+      line(193,0,0, 193);
+    }
+    else
+    {
+      circle(193/2, 193/2, 180);
+    }
+  }
+  
+  if(d01 == true)
+  {
+    if(currentPlayer == true){
+      line(200,0,393,193);
+      line(200,193,393,0);
+    }
+    else
+    {
+      circle(200+193/2, 193/2, 180);
+    }
+  }
+  
+  if(d10 == true)
+  {
+    if(currentPlayer == true){
+      line(0,0,193,193);
+      line(193,0,0, 193);
+    }
+    else
+    {
+      circle(193/2, 193/2, 180);
+    }
+  }
+  
+  if(d11 == true)
+  {
+    if(currentPlayer == true){
+      line(0,0,193,193);
+      line(193,0,0, 193);
+    }
+    else
+    {
+      circle(193/2, 193/2, 180);
+    }
+  }
+  
+  if(d12 == true)
+  {
+    if(currentPlayer == true){
+      line(0,0,193,193);
+      line(193,0,0, 193);
+    }
+    else
+    {
+      circle(193/2, 193/2, 180);
+    }
+  }
+  
+  if(d20 == true)
+  {
+    if(currentPlayer == true){
+      line(0,0,193,193);
+      line(193,0,0, 193);
+    }
+    else
+    {
+      circle(193/2, 193/2, 180);
+    }
+  }
+  if(d21 == true)
+  {
+    if(currentPlayer == true){
+      line(0,0,193,193);
+      line(193,0,0, 193);
+    }
+    else
+    {
+      circle(193/2, 193/2, 180);
+    }
+  }
+  if(d22 == true)
+  {
+    if(currentPlayer == true){
+      line(0,0,193,193);
+      line(193,0,0, 193);
+    }
+    else
+    {
+      circle(193/2, 193/2, 180);
+    }
+  }
+}
+
+function mousePressed() {
+ if(mouseX >= 0 && mouseX <= 193.3 && mouseY >= 0 && mouseY <= 193.3){
+   console.log('index 0, 0 is pressed');
+   console.log(currentPlayer);
+   d00 = true;
+   draw();
+   currentPlayer = !currentPlayer;
+ }
+  if(mouseX >= 200 && mouseX <= 393.3 && mouseY >= 0 && mouseY <= 193.3){
+    console.log('index 0, 1 is pressed');
+    console.log(currentPlayer);
+    d01 = true;
+   draw();
+    currentPlayer = !currentPlayer;
+  }
+  if(mouseX >= 400 && mouseX <= 594 && mouseY >= 0 && mouseY <= 193.3){
+    console.log('index 0, 2 is pressed');
+    console.log(currentPlayer);
+    d02 = true;
+   draw();
+    currentPlayer = !currentPlayer;
+  }
+  
+  if(mouseX >= 0 && mouseX <= 193.3 && mouseY >= 200 && mouseY <= 393.3){
+   console.log('index 1, 0 is pressed');
+    console.log(currentPlayer);
+    d10 = true;
+   draw();
+   currentPlayer = !currentPlayer;
+  }
+  if(mouseX >= 200 && mouseX <= 393.3 && mouseY >= 200 && mouseY <= 393.3){
+   console.log('index 1, 1 is pressed');
+    console.log(currentPlayer);
+    d11 = true;
+   draw();
+   currentPlayer = !currentPlayer;
+  }
+  if(mouseX >= 400 && mouseX <= 594 && mouseY >= 200 && mouseY <= 393.3){
+   console.log('index 1, 2 is pressed');
+    console.log(currentPlayer);
+    d12 = true;
+   draw();
+   currentPlayer = !currentPlayer;
+  }
+              
+  if(mouseX >= 0 && mouseX <=193.3 && mouseY >= 400 && mouseY <= 594){
+   console.log('index 2, 0 is pressed');
+    console.log(currentPlayer);
+    d20 = true;
+   draw();
+   currentPlayer = !currentPlayer;
+  }
+  if(mouseX >= 200 && mouseX <= 393.3 && mouseY >= 400 && mouseY <= 594){
+   console.log('index 2, 1 is pressed');
+    console.log(currentPlayer);
+    d21 = true;
+   draw();
+   currentPlayer = !currentPlayer;
+  }
+  if(mouseX >= 400 && mouseX <= 594 && mouseY >= 400 && mouseY <= 594){
+   console.log('index 2, 2 is pressed');
+    console.log(currentPlayer);
+    d22 = true;
+   draw();
+   currentPlayer = !currentPlayer;
+  }
+}
